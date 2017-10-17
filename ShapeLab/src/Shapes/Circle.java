@@ -7,7 +7,7 @@ public class Circle implements Shape{
 	{
 		this.radius = radius;
 	}
-	public double circumference()
+	public double perimeter()
 	{
 		return 2*radius*pi;
 	}
