@@ -15,4 +15,9 @@ public class Circle implements Shape{
 	{
 		return radius*radius*pi;
 	}
+	@Override
+    public String toString()
+    {
+        System.out.println("Radius length: " + radius + "\t Perimeter: " + this.perimeter() + "\t Area: " + this.area());
+    }
 }

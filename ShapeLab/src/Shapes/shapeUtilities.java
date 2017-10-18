@@ -25,6 +25,11 @@ public class shapeUtilities {
 		}
 		return sum;
 	}
+	/**
+     * Creates a random shape from the choices.
+     * @return Shape
+     * Student Work: Update with your own shape.
+     */
 	public static Shape getRandomShape()
 	{
 		Random r = new Random();
@@ -39,7 +44,7 @@ public class shapeUtilities {
 		case 2: 
 			return new Square(r.nextInt(100)+1);
 		default:
-			return new Square(r.nextInt(100)+1);
+			return new Circle(r.nextInt(100)+1);
 		}
 	}
 }
