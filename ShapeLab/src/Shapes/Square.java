@@ -2,9 +2,9 @@ package Shapes;
 
 public class Square extends Rectangle {
 	
-    int side;
+    double side;
 
-    public Square(int side)
+    public Square(double side)
     {
         super(side,side);
         this.side = side;
