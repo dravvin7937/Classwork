@@ -16,8 +16,8 @@ public class Runner {
         	System.out.println(shape);
         }
         System.out.println("\nDid the three shapes above add up to the total printed here?\n");
-        System.out.println("Total Area: " + ShapeUtilities.sumArea(shapeArr)); //168.26
-        System.out.println("Total Perimeter: " + ShapeUtilities.sumPerimeter(shapeArr)); //86.84
+        System.out.println("Total Area: " + shapeUtilities.sumArea(shapeArr)); //168.26
+        System.out.println("Total Perimeter: " + shapeUtilities.sumPerimeter(shapeArr)); //86.84
         System.out.println("\nDid the three shapes above add up to the total printed here?\n");
 
 
@@ -29,7 +29,7 @@ public class Runner {
         //Why are we using a for loop instead of a for-each loop here?
         for (int i = 0; i < shapeArr.length; i++)
         {
-            shapeArr[i] = ShapeUtilities.randomShape();
+            shapeArr[i] = shapeUtilities.getRandomShape();
         }
 
         for (Shape shape : shapeArr)
@@ -37,8 +37,8 @@ public class Runner {
             System.out.println(shape);
         }
 
-        System.out.println("\nTotal Area: " + ShapeUtilities.sumArea(shapeArr));
-        System.out.println("Total Perimeter: " + ShapeUtilities.sumPerimeter(shapeArr));
+        System.out.println("\nTotal Area: " + shapeUtilities.sumArea(shapeArr));
+        System.out.println("Total Perimeter: " + shapeUtilities.sumPerimeter(shapeArr));
 
     }
 	

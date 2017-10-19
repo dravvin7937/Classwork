@@ -13,7 +13,7 @@ public class Square extends Rectangle {
     @Override
     public String toString()
     {
-        System.out.println("Side length: " + side + "\t Perimeter: " + this.perimeter() + "\t Area: " + this.area());
+        return "Side length: " + side + "\t Perimeter: " + this.perimeter() + "\t Area: " + this.area();
     }
 
 }
