@@ -11,66 +11,57 @@ public class ArrayMethods {
 	
 	public static int[] removeDuplicates(int[] list)
 	{
-//		int[] newArr = new int[list.length];
-//		for (int x = 0; x<list.length;x++)
-//			//x =0, i = 1, 
-//		{
-//			boolean unique = true;
-//			
-//			for (int i = x+1; i<list.length; i++)
-//			{
-//				if (list[x]==list[i])
-//				{
-//					unique = false;
-//					break;
-//				}
-//
-//				if (unique)
-//				{
-//					newArr[x] = newArr[i];
-//				}
-//			}
-//			
-//		}
-//		for ( int y = 0 ; y<newArr.length; y++)
-//		{
-//			System.out.println(newArr[y]);
-//		}
-//		return newArr;
-		
 		int[] bitMask = new int[list.length];
 		int counter = 0;
 		for (int x = 0; x < list.length; x++)
 		{
-			for (int y = x+1; y < list.length; y++)
+			for (int y = x+1; y <= list.length; y++)
 			{
-				if (list[x] == list[y])
+				if (y == list.length)
+				{
+					bitMask[x] = 1;
+				}
+				else if (list[x] == list[y])
 				{
 					bitMask[x] = 0;
 					break;
 				}
-					
-			}
-			bitMask[x] = 1;
-			counter++;
+				else
+				{
+					//counter++;
+					bitMask[x] = 1;
+					counter++;
+				}
+			}	
 		}
 		
-		int[] newArr = new int[counter];
+		
+		int[] newArr = new int[counter-1];
+		
+		int idx = 0;
+		
 		for (int x = 0; x< list.length; x++)
 		{
 			if (bitMask[x]==1)
-			{
-				newArr[x] = list[x];
+			{	
+				newArr[idx] = list[x];
+				idx ++;
+				
 			}
 		}
-		for ( int y = 0 ; y<newArr.length; y++)
-			{
-				System.out.println(bitMask[y]);
-			}
+		
+		for ( int y = 0 ; y<bitMask.length; y++)
+		{
+			System.out.println(bitMask[y]);
+		}
+		
+		System.out.println("Counter: " + counter);
+		
 		for ( int y = 0 ; y<newArr.length; y++)
 		{
 			System.out.println(newArr[y]);
 		}
+		
 		return newArr;
 	}
 	
