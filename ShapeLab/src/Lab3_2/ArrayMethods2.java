@@ -17,7 +17,7 @@ public class ArrayMethods2 {
 		
 		for (int i = 0; i<mergedList.length; i++)
 		{
-			if(list1[i].compareTo(list2[i]))
+			if(list1[i].compareTo(list2[i]) == 0)
 			{
 				mergedList[i] = list1[i];
 				mergedList[i+1] = list1[i];
