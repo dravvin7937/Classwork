@@ -5,8 +5,8 @@ public class ArrayMethods2_2 {
 	public static void main(String[] args)
 	{
 		String[] list1 = {"a", "b", "c", "e"};
-		String[] list2 = {"a", "d", "e"};
-		// merged list should print: a , a , b, c, d, e, e
+		String[] list2 = {"a", "d", "e",};
+		// merged list should print: a, a, b, c, d, e, e
 		
 		String[] mergedListt = merge(list1,list2);
 		
@@ -14,11 +14,6 @@ public class ArrayMethods2_2 {
 		{
 			System.out.println(letter);
 		}
-		
-//		for (int i = 0 ; i<mergedListt.length; i++)
-//		{
-//			System.out.println(mergedListt[i]);
-//		}
 		
 	}
 	
@@ -33,39 +28,50 @@ public class ArrayMethods2_2 {
 		String check1 = list1[i];
 		String check2 = list2[x];
 		
-		while(mergedList[mergedList.length-1] == null)
+		while(i < list1.length && x < list2.length)
 		{
-			if (i == list1.length)
-			{
-				i--;
-			}
-			if (x == list2.length)
-			{
-				x--;
-			}
+			System.out.println("i: " + i + " x: " + x + " listIndex: " + listIndex + " check1: " + check1 + " check2: " + check2);
 			
-//			if (check1.compareTo(check2) == 0)
+//			if (i == list1.length)
 //			{
-//				mergedList[listIndex] = check1;
-//				listIndex++;
-////				mergedList[listIndex] = check2;
-////				listIndex++;
-//				check1 = list1[i++];
-////				check2 = list2[x++];
+//				i--;
 //			}
+//			if (x == list2.length)
+//			{
+//				x--;
+//			}
+			
 			if (check1.compareTo(check2) <= 0)
 			{
 				//check1 is closer to a than check2
 				mergedList[listIndex] = check1;
 				listIndex++;
-				check1 = list1[i++];
+				i++;
+				check1 = list1[i];
 			}
-			else if (check1.compareTo(check2) > 0)
+			else
 			{
 				//check2 is closer to a than check1
 				mergedList[listIndex] = check2;
 				listIndex++;
-				check2 = list2[x++];
+				x++;
+				check2 = list2[x];
+			}
+		}
+		
+		if (list1.length > list2.length)
+		{
+			for (int j = list2.length; j<list1.length; j++)
+			{
+				mergedList[listIndex] = list1[j];
+			}
+		}
+		
+		if (list1.length < list2.length)
+		{
+			for (int j = list1.length; j<list2.length; j++)
+			{
+				mergedList[listIndex] = list2[j];
 			}
 		}
 		
