@@ -5,7 +5,7 @@ public class ArrayMethods2_2 {
 	public static void main(String[] args)
 	{
 		String[] list1 = {"a", "b", "c", "e"};
-		String[] list2 = {"a", "d", "e",};
+		String[] list2 = {"a", "d", "e","f"};
 		// merged list should print: a, a, b, c, d, e, e
 		
 		String[] mergedListt = merge(list1,list2);
