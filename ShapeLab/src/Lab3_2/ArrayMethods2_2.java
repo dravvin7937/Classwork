@@ -6,10 +6,10 @@ public class ArrayMethods2_2 {
 	{
 		String[] list1 = {"a", "b", "c", "e"};
 		String[] list2 = {"a", "d", "e"};
-		int[] plist = {5,1,7,8,9,5,2};
-		
 		// merged list should print: a, a, b, c, d, e, e
 		
+		int[] plist = {5,1,7,8,9,5,2};
+	
 		String[] mergedListt = merge(list1,list2);
 		
 		for (String letter : mergedListt)
@@ -100,10 +100,6 @@ public class ArrayMethods2_2 {
 			mergeSort(list2);
 		}
 		
-//		if ( list1.length == 1 && list2.length == 1)
-//		{
-//			return merge(list1, list2);
-//		}
 		
 		return merge(list1, list2);		
 		
@@ -113,6 +109,7 @@ public class ArrayMethods2_2 {
 	{
 		//number that is meant to go in the middle
 		int pivot = list[0];
+		//index of the pivot
 		int pidx = 0;
 		//index that starts at front
 		int front = 1;
