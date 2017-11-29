@@ -28,6 +28,21 @@ public class ArrayMethods3 {
 		//if the number is greater than all behind it, don't move
 		for (int i = 0; i<list1.length; i++)
 		{
+			int num = list1[i];
+			// The element that is used to compare the sort starts at the second element
+			int key = i-1;
+			
+			while(key >= 0 && list1[key] > num)
+			{
+				// Swapped because there is a comparison with the number before it in order
+				//to assure that the number is effectively bigger hence swapping it
+				list1[key -1] = list1[key];
+				key = key-1;
+				
+			}
+			
+			// We have to restart the sort to compare the next number with the one that was just switched
+			list1[key -1]= num;
 			
 		}
 	}
