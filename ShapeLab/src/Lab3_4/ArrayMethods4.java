@@ -13,9 +13,15 @@ public class ArrayMethods4 {
 		int pivot = list1[front];
 		int pivPosition = front;
 		
+		if(back==front)
+		{
+			return pivPosition;
+		}
+		
 		while(back > front)
 		{
-			
+			//while the back is less than pivot
+			//subtract from the 
 		}
 	}
 	public static void quickSort(int[] list1, int front, int back)
