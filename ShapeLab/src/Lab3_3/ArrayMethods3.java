@@ -15,8 +15,8 @@ public class ArrayMethods3 {
 //			System.out.println(letter);
 //		}
 		
-		selectionSort(list3);
-		for (double num : list3)
+		insertionSort(list);
+		for (int num : list)
 		{
 			System.out.println(num);
 		}
@@ -26,23 +26,23 @@ public class ArrayMethods3 {
 	{	
 		//start with second element, check against first, move to the front if smaller
 		//if the number is greater than all behind it, don't move
-		for (int i = 0; i<list1.length; i++)
+		for (int i = 1; i<list1.length; i++)
 		{
 			int num = list1[i];
 			// The element that is used to compare the sort starts at the second element
 			int key = i-1;
 			
-			while(key >= 0 && list1[key] > num)
+			while(key <= list1.length-1 && list1[key] < num)
 			{
 				// Swapped because there is a comparison with the number before it in order
 				//to assure that the number is effectively bigger hence swapping it
-				list1[key -1] = list1[key];
-				key = key-1;
+				list1[key+1] = list1[key];
+				key = key+1;
 				
 			}
 			
 			// We have to restart the sort to compare the next number with the one that was just switched
-			list1[key -1]= num;
+			list1[key +1]= num;
 			
 		}
 	}

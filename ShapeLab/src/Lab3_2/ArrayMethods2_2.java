@@ -14,17 +14,13 @@ public class ArrayMethods2_2 {
 		
 		for (String letter : mergedListt)
 		{
-			System.out.println(letter);
+			//System.out.println(letter);
 		}
 		
 		
-		System.out.println("Partition:");
+		System.out.println("Partition: " + partition(plist));
 		
-		System.out.println(partition(plist));
-		for (int num: plist)
-		{
-			System.out.println(num);
-		}
+		
 	}
 	
 	public static String[] merge(String[] list1, String[] list2)
@@ -40,7 +36,7 @@ public class ArrayMethods2_2 {
 		
 		while(i < list1.length && x < list2.length-1)
 		{
-			System.out.println("i: " + i + " x: " + x + " listIndex: " + listIndex + " check1: " + check1 + " check2: " + check2);
+			//System.out.println("i: " + i + " x: " + x + " listIndex: " + listIndex + " check1: " + check1 + " check2: " + check2);
 			
 			if (check1.compareTo(check2) <= 0)
 			{
