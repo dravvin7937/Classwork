@@ -19,8 +19,6 @@ public class ArrayMethods2_2 {
 		
 		
 		System.out.println("Partition: " + partition(plist));
-		
-		
 	}
 	
 	public static String[] merge(String[] list1, String[] list2)
