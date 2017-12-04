@@ -8,7 +8,8 @@ public class ArrayMethods2_2 {
 		String[] list2 = {"a", "d", "e"};
 		// merged list should print: a, a, b, c, d, e, e
 		
-		int[] plist = {5,1,7,8,9,5,2};
+		int[] plist1 = {5,1,7,8,9,6,2};
+		int[] plist2 = {5,8,2,9};
 	
 		String[] mergedListt = merge(list1,list2);
 		
@@ -18,7 +19,9 @@ public class ArrayMethods2_2 {
 		}
 		
 		
-		System.out.println("Partition: " + partition(plist));
+		System.out.println("final pivot index: " + partition(plist1)); // should return 2 
+		System.out.println("final pivot index: " + partition(plist2)); // should return 1
+		
 	}
 	
 	public static String[] merge(String[] list1, String[] list2)
@@ -99,35 +102,61 @@ public class ArrayMethods2_2 {
 		
 	}
 	
+//	public static int partition( int[] list)
+//	{
+//		//number that is meant to go in the middle
+//		int pivot = list[0];
+//		//index of the pivot
+//		int pidx = 0;
+//		//index that starts at front
+//		int front = 1;
+//		//index that starts at back
+//		int back = list.length-1;
+//		
+//		//until back passes front & vice-versa
+//		while (back-2 >= front)
+//		{
+//			System.out.println("pivot: " + pivot + " against: " + list[back]);
+//			while ( pivot != list[back])
+//			{
+//				System.out.println(" pivot1: " + pidx);
+//				swap(list, pidx, back );
+//				pidx = back;
+//				System.out.println("Back: " + back + " front: " + front + " pivot1: " + pidx);
+//			}
+//			while ( pivot != list[front])
+//			{
+//				System.out.println(" pivot2: " + pidx);
+//				swap(list, pidx, front);
+//				pidx = front;
+//				System.out.println("Back: " + back + " front: " + front + " pivot2: " + pidx);
+//			}
+//			System.out.println("back3: " + back + " front3: " + front);
+//			back--;
+//			front++;
+//			System.out.println("back4: " + back + " front4: " + front);
+//		}
+//		
+//		return pidx; 
+//	}
+	
 	public static int partition( int[] list)
 	{
-		//number that is meant to go in the middle
+		int counter = 0;
 		int pivot = list[0];
-		//index of the pivot
-		int pidx = 0;
-		//index that starts at front
-		int front = 1;
-		//index that starts at back
-		int back = list.length-1;
 		
-		//until back passes front & vice-versa
-		while (back > front)
+		for (int i = 0; i<list.length; i++)
 		{
-			if ( pivot > back)
+			if(pivot > list[i])
 			{
-				swap(list, pidx, back );
-				pidx = back;
-				back--;
-			}
-			if ( pivot < front)
-			{
-				swap(list, pidx, front);
-				pidx = front;
-				front++;
+				for (int j = 0; j<i-counter; j++)
+				{
+					swap(list,i-j,i-j-1);
+				}
+				counter++;
 			}
 		}
-		
-		return pidx; 
+		return counter;
 	}
 	
 	public static void swap(int[] arr, int i, int j)

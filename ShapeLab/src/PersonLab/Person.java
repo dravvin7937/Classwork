@@ -16,6 +16,6 @@ public abstract class Person {
 		this.ssn = ssn;
 	}
 	public abstract String greeting();
-	public int calculateAge();
-	public String toString();
+//	public int calculateAge();
+//	public String toString();
 }
