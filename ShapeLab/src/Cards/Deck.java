@@ -63,7 +63,7 @@ public class Deck {
 		}
 		return null;
 	}
-	
+	 
 	public void shuffle(ArrayList<Card> deck)
 	{
 		//random number 1-51
