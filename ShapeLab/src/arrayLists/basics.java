@@ -6,7 +6,7 @@ public class basics {
 	
 	public static void main(String[] args)
 	{
-		List<Integer> list = new List<Integer>;
+		//List<Integer> list = new List<Integer>;
 	}
 	
 	public static List<Integer> removeDupes(List<Integer> nums)
