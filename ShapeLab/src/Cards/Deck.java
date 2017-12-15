@@ -7,15 +7,6 @@ public class Deck {
 	private ArrayList<Card> unDealt;
 	private ArrayList<Card> Dealt;
 	
-	public static void main(String[] args)
-	{
-		String[] ranks = {"A", "B", "C"};
-		String[] suits = {"Giraffes", "Lions"};
-		int[] pointValues = {2,1,6};
-		
-		ArrayList<Card> fullDeck = constructor(ranks, suits, pointValues);
-	}
-	
 	public Deck(ArrayList<Card> unDealt, ArrayList<Card> Dealt)
 	{
 		this.unDealt = unDealt;
@@ -57,17 +48,25 @@ public class Deck {
 		
 		for (int i = 0; i < size(deck); i++)
 		{
-			Card chosenCard = deck.get(i);
-			deck.remove(i);
-			Dealt.add(chosenCard);
+			Dealt.add(deck.remove(i));
 		}
 		return null;
 	}
 	 
-	public void shuffle(ArrayList<Card> deck)
+	public static void shuffle(ArrayList<Card> deck)
 	{
-		//random number 1-51
-		//Math.random() = ;
-		//selection shuffle algorithm 
+		for (int k = 51; k > 0; k--)
+		{
+			int r = (int)(Math.random() * k);
+			swap(deck, k, r);
+		}
+		
+	}
+	
+	public static void swap(ArrayList<Card> deck, int i, int j)
+	{
+		Card temp = deck.get(i);
+		deck.add(i, deck.get(j));
+		deck.add(j, temp);
 	}
 }

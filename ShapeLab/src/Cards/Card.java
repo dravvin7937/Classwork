@@ -33,6 +33,7 @@ public class Card {
 		return (this.pointValue == otherCard.pointValue);
 	}
 	
+	@Override
 	public String toString()
 	{
 		return "[" + this.rank + " " + this.suit + " " + this.pointValue + "]";
