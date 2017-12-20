@@ -29,7 +29,7 @@ public class Main extends Application {
         
         StackPane root = new StackPane();
         root.getChildren().add(btn);
-        primaryStage.setScene(new Scene(root, 300, 250));
+        primaryStage.setScene(new Scene(root, 100, 250));
         primaryStage.show();
     }
 }
