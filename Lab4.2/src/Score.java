@@ -15,6 +15,47 @@ public class Score {
 		this.math = math;
 		this.writing = writing;
 	}
+	
+	public String getName()
+	{
+		return name;
+	}
+	public void setName(String name)
+	{
+		this.name = name;
+	}
+	public int getNumTakers() 
+	{
+		return numTakers;
+	}
+	public void setNumTakers(int numTakers)
+	{
+		this.numTakers = numTakers;
+	}
+	public int getReading() 
+	{
+		return reading;
+	}
+	public void setReading(int reading)
+	{
+		this.reading = reading;
+	}
+	public int getMath() 
+	{
+		return math;
+	}
+	public void setMath(int math)
+	{
+		this.math = math;
+	}
+	public int getWriting() 
+	{
+		return writing;
+	}
+	public void setWriting(int writing)
+	{
+		this.writing = writing;
+	}
 	@Override
 	public String toString()
 	{
