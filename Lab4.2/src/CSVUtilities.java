@@ -114,9 +114,20 @@ public class CSVUtilities {
 		return data;
 	}
 	
-	//public List<Double> getDataDouble(int column)
+	public List<Double> getDataDouble(int column)
 	{
 		//get all data as converted to a double	
-		//List<Double>
+		List<Double> data = new ArrayList<>();
+		for (int i = 1; i < this.CSVData.size(); i++)
+		{
+			String[] row = this.CSVData.get(i).split(",");
+			if(row[column].toString() == "s")
+			{
+				break;
+			}
+			else
+				data.add(Double.parseDouble(row[column]));
+		}
+		return data;
 	}
 }
