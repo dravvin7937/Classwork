@@ -5,26 +5,36 @@ import javafx.scene.chart.LineChart;
 import javafx.scene.chart.NumberAxis;
 import javafx.stage.Stage;
 
-//file is called babies.csv
-
 public class Runner {
 
 	public static void main(String[] args)
 	{
-//		List<Score> scores = CSVUtilities.readFromCSV("scores.csv");
-//		for (Score s : scores)
+		File myCSV = new File("scores.csv");
+		
+		CSVUtilities mine = new CSVUtilities(myCSV);
+		
+//		for (String s : mine.getColumnHeaders())
 //		{
 //			System.out.println(s);
 //		}
-//		CSVUtilities CSVData = new CSVUtilities(fileName);
-//		CSVUtilities.getColumnHeaders();
+		
+		// tests the printing of school names 
+//		for (String s : mine.getDataString(1))
+//		{
+//			System.out.println(s.toUpperCase());
+//		}
+		
+		//test printing of number of students who took the test
+		for (int s : mine.getDataInt(2))
+		{
+			System.out.println(s);
+		}
+			
 	}
 	
 	public void start(Stage stage)
 	{
-		File myCSV = new File("scores.csv");
 		
-		CSVUtilities mine = new CSVUtilities(myCSV);
 		
 		//setting it up
 		stage.setTitle("Hello");

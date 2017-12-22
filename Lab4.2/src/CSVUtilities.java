@@ -87,7 +87,7 @@ public class CSVUtilities {
 	
 	public List<String> getDataString(int column)
 	{
-		//get all data from a csertain column
+		//get all data from a certain column
 		List<String> data = new ArrayList<>();
 		for (int i = 1; i < this.CSVData.size(); i++)
 		{
@@ -104,20 +104,19 @@ public class CSVUtilities {
 		for (int i = 1; i < this.CSVData.size(); i++)
 		{
 			String[] row = this.CSVData.get(i).split(",");
-			data.add(Integer.parseInt(row[column]));
+			if(row[column].toString() == "s")
+			{
+				break;
+			}
+			else
+				data.add(Integer.parseInt(row[column]));
 		}
 		return data;
 	}
 	
-	public List<Double> getDataDouble(int column)
+	//public List<Double> getDataDouble(int column)
 	{
 		//get all data as converted to a double	
-		List<Double> data = new ArrayList<>();
-		for (int i = 1; i < this.CSVData.size(); i++)
-		{
-			String[] row = this.CSVData.get(i).split(",");
-			data.add(Double.parseDouble(row[column]));
-		}
-		return data;
+		//List<Double>
 	}
 }

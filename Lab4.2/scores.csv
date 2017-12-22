@@ -5,7 +5,7 @@ DBN,School Name,Number of Test Takers,Critical Reading Mean,Mathematics Mean,Wri
 01M458,SATELLITE ACADEMY FORSYTH ST ,26,385,370,378
 01M509,CMSP HIGH SCHOOL ,s,s,s,s
 01M515,Lower East Side Preparatory High School ,154,314,532,314
-01M539,"New Explorations into Sci, Tech and Math HS ",47,568,583,568
+01M539,New Explorations into Sci Tech and Math HS ,47,568,583,568
 01M650,CASCADES HIGH SCHOOL ,35,411,401,401
 01M696,BARD HIGH SCHOOL EARLY COLLEGE ,138,630,608,630
 02M047,AMERICAN SIGN LANG ENG DUAL ,11,405,415,385
@@ -70,7 +70,7 @@ DBN,School Name,Number of Test Takers,Critical Reading Mean,Mathematics Mean,Wri
 02M655,LIFE SCIENCES SECONDARY SCHOOL ,71,399,389,383
 02M690,SCHOOL FOR THE PHYSICAL CITY ,14,382,404,359
 03M283,MANHATTAN THEATRE LAB HIGH SCHOOL ,23,406,378,391
-03M299,"High School For Arts, Imagination And Inquiry ",57,364,378,357
+03M299,High School For Arts Imagination And Inquiry ,57,364,378,357
 03M307,Urban Assembly School For Media Studies ,53,374,363,377
 03M404,INNOVATION DIPLOMA PLUS HIGH SCHOOL ,s,s,s,s
 03M415,WADLEIGH SECONDARY SCHOOL ,68,376,373,371
@@ -167,7 +167,7 @@ DBN,School Name,Number of Test Takers,Critical Reading Mean,Mathematics Mean,Wri
 10X141,RIVERDALE KINGSBRIDGE ACADEMY ,101,475,479,470
 10X213,BRONX ENGINEERING & TECH ACADEMY ,36,374,402,364
 10X225,Theatre Arts Production Company School ,53,382,375,363
-10X237,"Marie Curie HS for Nur, Med and Allied Health Prof ",48,373,358,366
+10X237,Marie Curie HS for Nur Med and Allied Health Prof ,48,373,358,366
 10X243,WEST BRONX ACADEMY FOR FUTURE ,32,365,382,375
 10X268,Kingsbridge International High School ,40,313,316,296
 10X284,BRONX SCHOOL OF LAW & FINANCE ,54,404,397,383
@@ -251,7 +251,7 @@ DBN,School Name,Number of Test Takers,Critical Reading Mean,Mathematics Mean,Wri
 14K454,GREEN SCHOOL: AN ACADEMY FOR ENVIRONMEN ,52,381,381,366
 14K474,Progress High School For Professional Careers ,102,365,375,373
 14K477,School for Legal Studies ,82,385,390,384
-14K478,"Enterprise, Business and Technology High School ",80,360,390,354
+14K478,Enterprise Business and Technology High School ,80,360,390,354
 14K488,BROOKLYN PREP HIGH SCHOOL ,44,397,377,387
 14K558,Williamsburg High School for Architecture & Design ,44,399,393,367
 14K561,WILLIAMSBURG PREP ,58,375,386,369
@@ -263,7 +263,7 @@ DBN,School Name,Number of Test Takers,Critical Reading Mean,Mathematics Mean,Wri
 14K923,YABC at Automative High School ,s,s,s,s
 15K429,BROOKLYN SCHOOL GLOBAL STUDIES ,50,374,365,374
 15K448,Brooklyn Secondary Sch for Collaborative Studies ,63,385,380,375
-15K462,"Secondary School for Law, Journalism and Research ",50,406,409,393
+15K462,Secondary School for Law Journalism and Research ,50,406,409,393
 15K463,SECONDARY SCHOOL JOURNALISM ,75,393,372,370
 15K464,SECONDARY SCHOOL FOR RESEARCH ,65,373,395,368
 15K497,SCHOOL INTERNATIONAL STUDIES ,45,402,414,382
@@ -319,7 +319,7 @@ DBN,School Name,Number of Test Takers,Critical Reading Mean,Mathematics Mean,Wri
 18K673,East Brooklyn Community High School ,s,s,s,s
 19K409,EAST NEW YORK FAMILY ACADEMY ,61,435,428,414
 19K420,FRANKLIN K LANE HIGH SCHOOL ,140,353,379,341
-19K431,"YOUNG ADULT BOROUGH CTR, THOMAS JEFFERS ",s,s,s,s
+19K431,YOUNG ADULT BOROUGH CTR THOMAS JEFFERS,s,s,s,s
 19K435,THOMAS JEFFERSON HIGH SCHOOL ,s,s,s,s
 19K502,FDNY HIGH SCH DOR FIRE & LIFE ,29,376,375,363
 19K504,HIGH SCHOOL FOR CIVIL RIGHTS ,23,369,372,380
@@ -393,7 +393,7 @@ DBN,School Name,Number of Test Takers,Critical Reading Mean,Mathematics Mean,Wri
 26Q566,Queens High School-Teaching Liberal Arts Sciences ,144,438,455,433
 27Q260,FREDERICK DOUGLASS ACADEMY VI ,65,393,390,387
 27Q262,CHANNEL VIEW SCHOOL FOR RESEARCH ,63,455,423,420
-27Q302,"Queens High School for Information, Research, and Te ",s,s,s,s
+27Q302,Queens High School for Information Research and Te ,s,s,s,s
 27Q308,Robert H. Goddard High School for Communication Art ,s,s,s,s
 27Q309,ACADEMY OF MEDICAL TECHNOLOGY ,s,s,s,s
 27Q323,Region Five Scholars' Academy ,s,s,s,s
@@ -403,7 +403,7 @@ DBN,School Name,Number of Test Takers,Critical Reading Mean,Mathematics Mean,Wri
 27Q475,RICHMOND HILL HIGH SCHOOL ,397,380,401,380
 27Q480,JOHN ADAMS HIGH SCHOOL ,302,399,424,404
 27Q487/27Q481,YABC AT JOHN ADAMS HIGH SCHOOL ,s,s,s,s
-27Q650,"HS for Construction Trades, Engineering and Arch ",87,421,464,424
+27Q650,HS for Construction Trades Engineering and Arch ,87,421,464,424
 28Q310,Queens Collegiate: A College Board School ,s,s,s,s
 28Q338,SATELLITE ACADEMY ,22,346,351,338
 28Q440,FOREST HILLS HIGH SCHOOL ,627,468,491,462
