@@ -1,6 +1,8 @@
 import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -19,8 +21,6 @@ public class CSVUtilities {
 		this.csv = csv;
 		this.CSVData = new ArrayList<>();
 		Path pathToFile = Paths.get(csv.getPath());
-		
-		List<Score> scores = new ArrayList<>();
 		
 		try (BufferedReader br = Files.newBufferedReader(pathToFile, StandardCharsets.US_ASCII))
 		{
@@ -96,8 +96,28 @@ public class CSVUtilities {
 		return data;
 	}
 	
-	public writeCSV(File file)
+	public void writeCSV(File file)
 	{
+		PrintWriter pw = null;
+		try
+		{
+			pw = new PrintWriter(new File("high_scores.csv"));
+		}
+		catch (FileNotFoundException e)
+		{
+			System.err.println(e);
+		}
 		
+		StringBuilder sb = new StringBuilder();
+		
+		for (int col = 0; col < numColumns; col++)
+		{
+			if (CSVData.get(col).equals("\n"))
+				col++;
+			else
+				sb.append(CSVData.get(col));
+		}
+		pw.write(sb.toString());
+		pw.close();
 	}
 }
