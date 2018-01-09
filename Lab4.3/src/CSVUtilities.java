@@ -111,13 +111,13 @@ public class CSVUtilities {
 		StringBuilder sb = new StringBuilder();
 		sb.append("Name,Scores\n");
 		
-//		for (int col = 0; col < numColumns; col++)
-//		{
-//			if (CSVData.get(col).equals("\n"))
-//				col++;
-//			else
-//				sb.append(CSVData.get(col));
-//		}
+		for (int col = 0; col < numColumns; col++)
+		{
+			if (CSVData.get(col).equals("\n"))
+				col++;
+			else
+				sb.append(CSVData.get(col));
+		}
 		pw.write(sb.toString());
 		pw.close();
 	}
