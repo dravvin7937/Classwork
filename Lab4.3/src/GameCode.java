@@ -10,6 +10,12 @@ import javafx.scene.control.Label;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
+/*
+ * FastClicker Game - 4.3 (easy)
+ * Created by Dana Ravvin
+ * Began 1/8/18
+ */
+
 //public class GameCode extends Application{
 //
 //	/*
@@ -62,32 +68,35 @@ import javafx.stage.Stage;
 
 public class GameCode extends Application  {
 	
+	//created fields so i can use them in backend 
+	
 	static int score = 0;
+	//game started
 	static boolean game = true;
-	static Text playerScore = new Text("Score: ");
-	static Text status = new Text("Game On!");
+	
     static Button button = new Button("Click me!");
+    
     static long timer = System.nanoTime() + 10000000000L;
     
+    //launch the button
 	public static void main(String[] args) 
 	{
         Application.launch(args);
     }
 	
+	//sets the scene
     @Override
     public void start(Stage primaryStage)
     {
         primaryStage.setTitle("FastClicker Game");
 
-
         Scene scene = new Scene(button, 200, 100);
         primaryStage.setScene(scene);
         primaryStage.show();
-
-       
         
       //creates the score increase for every click
-		button.setOnAction(new EventHandler<ActionEvent>() {
+		button.setOnAction(new EventHandler<ActionEvent>() 
+		{
 		    @Override
 		    public void handle(ActionEvent actionEvent) {
 		        if (game == true)
@@ -95,13 +104,11 @@ public class GameCode extends Application  {
 		        		score++;
 		        }
 		    }
-		});
+		}
+		);
         
-		
 		BackEnd.startTime.start();
-    }
-
-    
+    }   
 }
 
 
