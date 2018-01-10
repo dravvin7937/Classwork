@@ -1,3 +1,4 @@
+import java.util.Random;
 import java.util.Timer;
 
 import javafx.animation.AnimationTimer;
@@ -14,7 +15,8 @@ import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 /*
- * FastClicker Game - 4.3 (easy)
+ * FastClicker Game - 4.3 (easy) COMPLETE
+ * ChaseButton Game - 4.3 (moderate)
  * Created by Dana Ravvin
  * Began 1/8/18
  */
@@ -23,7 +25,13 @@ public class GameCode extends Application  {
 	
 	//created fields so i can use them in backend 
 	
+	static Random r = new Random(10);
+	int rnd = r.nextInt();
+	
 	static int score = 0;
+
+    static Text sc = new Text("Score: 0");
+    
 	//game started
 	static boolean game = true;
 	
@@ -45,7 +53,7 @@ public class GameCode extends Application  {
     {
         primaryStage.setTitle("FastClicker Game");
 
-        VBox vbox = new VBox(button);
+        VBox vbox = new VBox(sc,button);
         
         Scene scene = new Scene(vbox, 400, 300);
         primaryStage.setScene(scene);
@@ -61,19 +69,15 @@ public class GameCode extends Application  {
 		    public void handle(ActionEvent actionEvent) {
 		        if (game == true)
 		        {
-		        		score++;
+	        		score++;
+	        		sc.setText("Score: " + score);
 		        }
+        		button.setTranslateX(10);
+        		//button.setTranslateY(rnd);
 		    }
 		}
 		);
         
 		BackEnd.startTime.start();
-
-	    Text scores = new Text(10,50,Integer.toString(score));
-	    
-		
     }   
 }
-
-/*
- * timer works - button greys out after 10 seconds. text with score not yet implemented 
