@@ -31,6 +31,7 @@ public class GameCode extends Application  {
 	static int score = 0;
 
     static Text sc = new Text("Score: 0");
+    static Text hs = new Text("High score: " + score);
     
 	//game started
 	static boolean game = true;
@@ -45,6 +46,7 @@ public class GameCode extends Application  {
         Application.launch(args);
         
         //BackEnd.writeCSV();
+        System.out.println("your score: " + score);
     }
 	
 	//sets the scene
@@ -53,7 +55,7 @@ public class GameCode extends Application  {
     {
         primaryStage.setTitle("FastClicker Game");
 
-        VBox vbox = new VBox(sc,button);
+        VBox vbox = new VBox(sc,hs,button);
         
         Scene scene = new Scene(vbox, 400, 300);
         primaryStage.setScene(scene);
@@ -72,12 +74,13 @@ public class GameCode extends Application  {
 	        		score++;
 	        		sc.setText("Score: " + score);
 		        }
-        		button.setTranslateX(10);
+        		//button.setTranslateX(10);
         		//button.setTranslateY(rnd);
 		    }
 		}
 		);
-        
+
+        hs.setText("High Score: " + score);
 		BackEnd.startTime.start();
     }   
 }
